@@ -16,7 +16,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#033d3e] text-white pt-16 pb-12 relative overflow-hidden">
+    <footer className="bg-[#033d3e]  text-white pt-16 pb-5 relative overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[url('/noise.png')]"></div>
@@ -53,7 +53,7 @@ const Footer = () => {
               Providing quality educational resources since 1985. Your trusted
               partner in academic excellence and knowledge dissemination.
             </p>
-            <div className="flex space-x-3 pt-2">
+            <div className="flex  justify-center space-x-3 pt-2">
               {[
                 {
                   icon: Facebook,
@@ -74,11 +74,6 @@ const Footer = () => {
                   icon: FaTiktok,
                   url: "https://www.tiktok.com/",
                   color: "hover:text-black-400",
-                },
-                {
-                  icon: Youtube,
-                  url: "https://www.youtube.com/",
-                  color: "hover:text-red-500",
                 },
               ].map((social, index) => (
                 <Link
@@ -141,21 +136,6 @@ const Footer = () => {
               Contact Us
             </h3>
             <ul className="space-y-4">
-              <li className="flex items-start group">
-                <div className="relative mt-0.5 mr-3">
-                  <MapPin
-                    className="h-5 w-5 text-blue-200 flex-shrink-0 transition-all 
-                  duration-500 group-hover:scale-110 group-hover:text-white"
-                  />
-                  <div
-                    className="absolute inset-0 rounded-full bg-blue-200/10 opacity-0 
-                  group-hover:opacity-100 group-hover:scale-125 transition-all duration-300"
-                  ></div>
-                </div>
-                <span className="text-gray-300 text-sm transition-all duration-300 group-hover:text-white/90">
-                  6 - Urdu Bazar, Lahore, Pakistan 54000
-                </span>
-              </li>
               <li className="flex items-center group">
                 <div className="relative mr-3">
                   <Phone
@@ -169,11 +149,11 @@ const Footer = () => {
                 </div>
                 <span className="text-gray-300 text-sm">
                   <a
-                    href="tel:03361118212"
+                    href="tel:03474974948"
                     className="hover:text-blue-200 transition-all duration-300 
                     hover:underline underline-offset-4 decoration-blue-200/50"
                   >
-                    0336-1118212
+                    0347-4974948
                   </a>
                 </span>
               </li>
@@ -190,11 +170,11 @@ const Footer = () => {
                 </div>
                 <span className="text-gray-300 text-sm">
                   <a
-                    href="mailto:sales@ilmibookhouse.com"
+                    href="mailto:Kitabbazar980@gmail.com"
                     className="hover:text-blue-200 transition-all duration-300 
                     hover:underline underline-offset-4 decoration-blue-200/50"
                   >
-                    sales@ilmibookhouse.com
+                    Kitabbazar980@gmail.com
                   </a>
                 </span>
               </li>
@@ -211,18 +191,22 @@ const Footer = () => {
                 </div>
                 <span className="text-gray-300 text-sm">
                   <a
-                    href="https://wa.me/923361118212"
+                    href="https://wa.me/923474974948"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-blue-200 transition-all duration-300 
                     hover:underline underline-offset-4 decoration-blue-200/50"
                   >
-                    WhatsApp: 0336-1118212
+                    WhatsApp: 0347-4974948
                   </a>
                 </span>
               </li>
             </ul>
           </div>
+        </div>
+        {/* All rights reserved */}
+        <div className="mt-12 text-center  text-gray-300 text-sm">
+          © {new Date().getFullYear()} Developed by Nexus Devs Sol
         </div>
       </div>
     </footer>

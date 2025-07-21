@@ -427,12 +427,35 @@ const BookCard = () => {
           )}
 
           {hasMore && !isLoading && (
+            // <div className="flex justify-center mt-8">
+            //   <button
+            //     onClick={loadMore}
+            //     className="relative px-8 py-3 cursor-pointer bg-[#033d3e] text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-[#022c2d] transform hover:-translate-y-1 overflow-hidden group"
+            //   >
+            //     <span className="relative z-10 flex items-center">
+            //       Load More
+            //       <svg
+            //         xmlns="http://www.w3.org/2000/svg"
+            //         className="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-y-1"
+            //         viewBox="0 0 20 20"
+            //         fill="currentColor"
+            //       >
+            //         <path
+            //           fillRule="evenodd"
+            //           d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z"
+            //           clipRule="evenodd"
+            //         />
+            //       </svg>
+            //     </span>
+            //     <span className="absolute inset-0 bg-[#045859] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            //   </button>
+            // </div>
             <div className="flex justify-center mt-8">
               <button
                 onClick={loadMore}
-                className="relative px-8 py-3 cursor-pointer bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:from-blue-600 hover:to-purple-700 transform hover:-translate-y-1 overflow-hidden group"
+                className="relative px-8 py-3 cursor-pointer bg-gradient-to-r from-[#033d3e] to-[#045859] text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#022c2d] hover:to-[#033d3e] transform hover:-translate-y-1 overflow-hidden group"
               >
-                <span className="relative z-10  flex items-center">
+                <span className="relative z-10 flex items-center">
                   Load More
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -447,7 +470,7 @@ const BookCard = () => {
                     />
                   </svg>
                 </span>
-                <span className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-[#045859] to-[#067a7c] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               </button>
             </div>
           )}

@@ -218,7 +218,7 @@ const ImageSlider = () => {
       intervalId = setInterval(() => {
         nextSlide();
         nextQuote();
-      }, 5000);
+      }, 3000);
     }
 
     return () => {
@@ -273,18 +273,18 @@ const ImageSlider = () => {
                 slideIndex
               )}`}
             >
-              {/* Single background image with subtle blur */}
+              {/* Background image without blur */}
               <Image
                 src={slide.url}
                 alt={slide.alt}
                 fill
-                className="object-cover blur-[2px]" // Just the blur effect
+                className="object-cover" // Removed blur effect
                 priority={currentIndex === slideIndex}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1400px"
               />
 
-              {/* Optional: Dark overlay for better text contrast (can remove if not needed) */}
-              <div className="absolute inset-0 bg-black/20"></div>
+              {/* Green overlay instead of dark overlay */}
+              <div className="absolute inset-0 bg-green-900/30"></div>
             </div>
           ))}
         </div>
