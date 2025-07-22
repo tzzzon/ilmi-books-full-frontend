@@ -129,35 +129,6 @@ const LoginPage = () => {
             </div>
           </motion.div>
 
-          {/* Remember Me & Forgot Password */}
-          <motion.div
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3 }}
-            className="flex items-center justify-between"
-          >
-            <div className="flex items-center">
-              <input
-                id="remember-me"
-                name="remember-me"
-                type="checkbox"
-                className="h-4 w-4 text-[#033d3e] focus:ring-[#033d3e] border-[#033d3e]/20 rounded"
-              />
-              <label
-                htmlFor="remember-me"
-                className="ml-2 block text-sm text-[#033d3e]/80"
-              >
-                Remember me
-              </label>
-            </div>
-            <Link
-              href="/forgot-password"
-              className="text-sm font-medium text-[#033d3e] hover:text-[#046e70] transition-colors"
-            >
-              Forgot password?
-            </Link>
-          </motion.div>
-
           {/* Submit Button */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -168,7 +139,7 @@ const LoginPage = () => {
               <button
                 type="button"
                 disabled={isLoading}
-                className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white ${
+                className={`w-full flex cursor-pointer justify-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white ${
                   isLoading
                     ? "bg-[#033d3e]/70 cursor-not-allowed"
                     : "bg-[#033d3e] hover:bg-[#022b2c] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#033d3e]/50"
@@ -210,24 +181,6 @@ const LoginPage = () => {
             </Link>
           </motion.div>
         </form>
-
-        {/* Footer */}
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="px-6 py-4 bg-[#f8fafb] text-center border-t border-[#033d3e]/10"
-        >
-          <p className="text-sm text-[#033d3e]/70">
-            Don't have an account?{" "}
-            <Link
-              href="/register"
-              className="font-medium text-[#033d3e] hover:text-[#046e70] transition-colors"
-            >
-              Request access
-            </Link>
-          </p>
-        </motion.div> */}
       </motion.div>
     </div>
   );
