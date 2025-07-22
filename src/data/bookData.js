@@ -244,3 +244,25 @@ export const relatedBooks = bookData
     originalPrice: book.originalPrice,
     category: book.category,
   }));
+export const initialOrders = [
+  {
+    id: 1,
+    customerName: "John Doe",
+    items: [
+      { bookId: 1, quantity: 2, price: 1350 },
+      { bookId: 3, quantity: 1, price: 1650 },
+    ],
+    total: 4350,
+    date: "2023-05-15",
+  },
+  {
+    id: 2,
+    customerName: "Jane Smith",
+    items: [
+      { bookId: 5, quantity: 1, price: 1875 },
+      { bookId: 7, quantity: 3, price: 1275 },
+    ],
+    total: 5700,
+    date: "2023-05-16",
+  },
+];

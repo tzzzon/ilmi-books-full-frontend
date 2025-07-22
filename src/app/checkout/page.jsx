@@ -117,13 +117,46 @@ const CheckoutPage = () => {
 
     setFormError("");
 
-    // Save form data if user opted to
+    // 1. Create the order object
+    const newOrder = {
+      id: Date.now(), // Timestamp ensures ID > placeholder IDs (1-2)
+      customerInfo: {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        address: formData.address,
+        apartment: formData.apartment,
+        city: formData.city,
+        country: formData.country,
+        phone: formData.phone,
+      },
+      items: [...cart, ...buyNowItems].map((item) => ({
+        bookId: item.id,
+        quantity: item.quantity,
+        price: item.salePrice,
+      })),
+      subtotal: subtotal,
+      shippingCost: 250,
+      total: total,
+      date: new Date().toISOString(),
+      status: "Processing",
+    };
+
+    // 2. Save to localStorage (replaces placeholders if needed)
+    const currentOrders = JSON.parse(localStorage.getItem("orders") || []);
+    localStorage.setItem(
+      "orders",
+      JSON.stringify([...currentOrders, newOrder])
+    );
+
+    // 3. Save form data if user opted to
     if (formData.saveInfo) {
       localStorage.setItem("checkout-info", JSON.stringify(formData));
     }
 
+    // 4. Clear cart and show success
     setShowSuccessModal(true);
     clearCart();
+
     setTimeout(() => {
       setShowSuccessModal(false);
       router.push("/");

@@ -30,7 +30,8 @@
     "src/app/page.tsx",
     "src/components/ImageSlider.jsx",
     "src/components/BookCard.jsx",
-    "src/components/Navbar.tsx"
+    "src/components/Navbar.tsx",
+    "src/app/admin/page.jsx"
   ],
   "exclude": ["node_modules"]
 }
